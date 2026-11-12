@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 
 class Pokemon extends StatelessWidget {
@@ -14,7 +12,6 @@ class Pokemon extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     // print("Print pokemon ${listPokemon[1]}");
     listPokemon.forEach((element) {
       if (element == 'Pikachu') {
@@ -28,11 +25,18 @@ class Pokemon extends StatelessWidget {
     print('Building Pokemon Screen');
 
     return Scaffold(
-      appBar: AppBar(
-        title: Text('My Pokemon App'),
-      ),
-      body: Container(
-        color: Colors.white,
+      appBar: AppBar(title: Text('My Pokemon App')),
+      body: ListView.builder(
+        itemCount: listPokemon.length,
+        itemBuilder: (context, index) {
+          return Container(
+            padding: EdgeInsets.all(20),
+            child: Text(
+              listPokemon[index],
+              style: const TextStyle(fontSize: 20),
+            ),
+          );
+        },
       ),
     );
   }
