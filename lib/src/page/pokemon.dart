@@ -5,7 +5,7 @@ class Pokemon extends StatelessWidget {
 
   final List<String> listPokemon = [
     'Pikachu',
-    'Charmander',
+    'Jigglypuff',
     'Squirtle',
     'Bulbasaur',
   ];
@@ -13,19 +13,22 @@ class Pokemon extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // print("Print pokemon ${listPokemon[1]}");
-    listPokemon.forEach((element) {
+    for (var element in listPokemon) {
       if (element == 'Pikachu') {
         print("pika pika");
       } else {
-        print("$element");
+        print(element);
       }
       print("Contoh print $element");
-    });
+    }
 
     print('Building Pokemon Screen');
 
     return Scaffold(
       appBar: AppBar(title: Text('My Pokemon App')),
+      // body: Container(
+      //   child: Image.asset("images/jigglypuff.png")
+      // )
       body: ListView.builder(
         itemCount: listPokemon.length,
         itemBuilder: (context, index) {

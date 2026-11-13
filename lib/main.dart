@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
-import 'package:my_pokemon_app/src/pokemon.dart';
+import 'package:my_pokemon_app/src/page/pokemon.dart';
+import 'package:my_pokemon_app/src/page/pokemon2.dart';
 
 void main() {
   print("Contoh print sesuatu");
@@ -20,7 +21,7 @@ class MyAppNew extends StatelessWidget {
         ),
         useMaterial3: true,
       ),
-      home: Pokemon(),
+      home: Pokemon2(),
     );
   }
 }
